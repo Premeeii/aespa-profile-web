@@ -1,0 +1,26 @@
+<div class="bg-black min-h-screen text-white px-6 md:px-16 py-16">
+  <!-- ALBUMS -->
+  <h2 class="text-sm font-semibold tracking-widest mb-6">ALBUMS</h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
+    @for (album of albums; track $index) {
+      <img
+        [src]="album.uri"
+        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+        [routerLink]="album.path"
+      />
+    }
+  </div>
+
+  <!-- SINGLES -->
+  <h2 class="text-sm font-semibold tracking-widest mb-6">SINGLES</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
+    @for (single of singles; track $index) {
+      <img
+        [src]="single.uri"
+        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+        [routerLink]="single.path"
+      />
+    }
+  </div>
+</div>

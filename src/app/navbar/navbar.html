@@ -1,0 +1,36 @@
+<div class="sticky top-0 z-100 bg-black p-2">
+  <div>
+    <nav class="hidden md:flex justify-between items-center h-16 p-8 sticky text-white">
+      <a routerLink="/members" class="font-bold text-xl hover:text-gray-400 transition">MEMBERS</a>
+      <a routerLink="/about" class="font-bold text-xl hover:text-gray-400 transition">ABOUT</a>
+      <img src="aespa-logo.png" class="w-35 cursor-pointer" routerLink="/" />
+      <a routerLink="/tracks" class="font-bold text-xl hover:text-gray-400 transition">TRACKS</a>
+      <a routerLink="/news" class="font-bold text-xl hover:text-gray-400 transition">NEWS</a>
+    </nav>
+
+  </div>
+
+  <!-- Mobile -->
+  <div class="md:hidden">
+    <div class="flex justify-end p-2">
+      <button class="text-2xl text-white" (click)="toggleMenu()">☰</button>
+    </div>
+
+    <!-- Dropdown -->
+    <div
+      class="absolute right-2 bg-white shadow-md origin-top w-48"
+      [ngClass]="{
+        'animate-slideDown': isOpen,
+        'animate-slideUp': !isOpen,
+      }"
+    >
+      <div class="px-4 py-4 space-y-3 text-end text-sm">
+        <a routerLink="/" class="block" (click)="toggleMenu()">HOME</a>
+        <a routerLink="/members" class="block" (click)="toggleMenu()">MEMBERS</a>
+        <a routerLink="/about" class="block" (click)="toggleMenu()">ABOUT</a>
+        <a routerLink="/tracks" class="block" (click)="toggleMenu()">TRACK</a>
+        <a routerLink="/news" class="block" (click)="toggleMenu()">NEWS</a>
+      </div>
+    </div>
+  </div>
+</div>
