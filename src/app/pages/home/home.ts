@@ -26,7 +26,7 @@ export class Home  {
 
   
   ngOnInit() {
-    this.subscription = interval(2000).subscribe(() => {
+    this.subscription = interval(5000).subscribe(() => {
       this.currentIndex =
         (this.currentIndex + 1) % this.images.length;
 
