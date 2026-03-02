@@ -1,48 +1,30 @@
 <!-- ===== SLIDER ===== -->
-<div class="flex justify-center bg-black py-6 px-4">
-  <div class="relative w-full max-w-5xl aspect-video overflow-hidden rounded-xl shadow-lg">
-    @for (img of images; track $index; let i = $index) {
-      <!-- ===== เช็คค่า i กับ currentIndex ที่ส่งเข้ามาว่าตรงกันรึ้เปล่า ถ้าไม่ตรงก็จะfadeออก ===== -->
-
-      <div
-        class="absolute inset-0 transition-opacity duration-700 ease-in-out"
-        [ngClass]="{ 
-          'opacity-100 z-10': i === currentIndex, 
-          'opacity-0 z-0': i !== currentIndex,
-        }"
-      >
-        <img [src]="img" class="w-full h-full object-cover" />
-        <div class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-          @for (img of images; track $index; let i = $index) {
-            <button
-              (click)="goToSlide(i)"
-              class="w-3 h-3 rounded-full transition-all duration-300"
-              [ngClass]="{
-                'bg-gray-300 scale-125': i === currentIndex,
-                'bg-white/50': i !== currentIndex,
-              }"
-            ></button>
-          }
-        </div>
-      </div>
-    }
-
-    <!-- Prev -->
-    <button
-      (click)="prev()"
-      class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 md:px-3 md:py-2 rounded-full z-20 transition"
+<div class="relative w-full h-[40vh] md:h-screen overflow-hidden">
+  
+  @for (img of images; track $index; let i = $index) {
+    <div
+      class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+      [ngClass]="{
+        'opacity-100 z-10': i === currentIndex,
+        'opacity-0 z-0': i !== currentIndex,
+      }"
     >
-      ‹
-    </button>
+      <!-- Background Image -->
+      <img [src]="img" class="absolute inset-0 w-full h-full object-cover" />
 
-    <!-- Next -->
-    <button
-      (click)="next()"
-      class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 md:px-3 md:py-2 rounded-full z-20 transition"
-    >
-      ›
-    </button>
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/20"></div>
+    </div>
+  }
+  <div
+    class="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20 px-4"
+  >
+    <img src="aespa-logo.png" class="w-30 md:w-100"/>
   </div>
+  <!-- Fade Bottom Effect -->
+  <div
+    class="absolute bottom-0 left-0 w-full h-5 md:h-80 bg-linear-to-b from-transparent to-black z-20"
+  ></div>
 </div>
 
 <!-- MEMBERS  -->
@@ -51,33 +33,64 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
     <div class="flex-row text-center">
-      <img src="karina1.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
+      <img
+        src="karina1.jpg"
+        class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+        routerLink="/karina"
+      />
       <p class="text-white py-2 text-xl font-semibold">KARINA</p>
     </div>
-     <div class="flex-row text-center">
-      <img src="giselle1.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
+    <div class="flex-row text-center">
+      <img
+        src="giselle1.jpg"
+        class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+        routerLink="/giselle"
+      />
       <p class="text-white py-2 text-xl font-semibold">GISELLE</p>
     </div>
     <div class="flex-row text-center">
-      <img src="winter1.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
+      <img
+        src="winter1.jpg"
+        class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+        routerLink="/winter"
+      />
       <p class="text-white py-2 text-xl font-semibold">WINTER</p>
     </div>
     <div class="flex-row text-center">
-      <img src="ningning1.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
+      <img
+        src="ningning1.jpg"
+        class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+        routerLink="/ningning"
+      />
       <p class="text-white py-2 text-xl font-semibold">NINGNING</p>
     </div>
   </div>
 </div>
 
 <!--  ALBUMS  -->
-<div class="px-4 md:px-12 lg:px-24 py-5 bg-black">
+<div class="px-4 md:px-12 lg:px-24 py-5 h-100 bg-black">
   <p class="text-center text-2xl md:text-5xl font-semibold mb-6 text-white pirate">ALBUM</p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 justify-items-center">
-    <img src="savage.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
-    <img src="armageddon.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
-    <img src="girls.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
-    <img src="myworld.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
-    <img src="drama.jpg" class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300" />
-    </div>
+    <img
+      src="savage.jpg"
+      class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+    />
+    <img
+      src="armageddon.jpg"
+      class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+    />
+    <img
+      src="girls.jpg"
+      class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+    />
+    <img
+      src="myworld.jpg"
+      class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+    />
+    <img
+      src="drama.jpg"
+      class="w-full max-w-xs rounded-lg shadow-md object-cover hover:scale-110 transition duration-300"
+    />
+  </div>
 </div>

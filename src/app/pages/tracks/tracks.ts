@@ -10,11 +10,11 @@ import { RouterModule } from '@angular/router';
 export class Tracks {
 
     albums = [
-      {uri:'savage.jpg', path:'/'},
+      {uri:'savage.jpg', path:'/savage'},
       {uri:'armageddon.jpg', path:'/armageddon'},
-      {uri:'girls.jpg', path:'/'},
-      {uri:'myworld.jpg', path:'/'},
-      {uri:'drama.jpg', path:'/'},
+      {uri:'girls.jpg', path:'/girl'},
+      {uri:'myworld.jpg', path:'/myworld'},
+      {uri:'drama.jpg', path:'/drama'},
     ]
 
     singles = [
