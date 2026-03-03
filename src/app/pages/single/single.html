@@ -1,0 +1,25 @@
+@if (videoUrl) {
+  <div class="bg-black py-25 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="aspect-video w-full">
+        <iframe
+          class="w-full h-full rounded-2xl"
+          [src]="videoUrl"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+}

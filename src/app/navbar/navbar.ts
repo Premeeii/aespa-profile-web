@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgClass } from '@angular/common';
 
+
 @Component({
   selector: 'app-navbar',
   imports: [RouterModule, NgClass],

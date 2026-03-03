@@ -1,4 +1,4 @@
-<div class="bg-black min-h-screen text-white px-6 md:px-20 py-10">
+<div class="bg-black min-h-screen text-white px-6 md:px-20 py-25">
   <!-- TOP SECTION -->
   <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
     <!-- Album Cover -->
@@ -15,7 +15,7 @@
   <div class="mt-10">
     <h2 class="text-lg md:text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">Track List</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 text-base sm:text-lg md:text-xl">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 text-base sm:text-lg md:text-2xl">
       @for (track of tracks; track $index) {
         <a
           [href]="track.url"

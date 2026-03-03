@@ -18,23 +18,24 @@ export class Tracks {
     ]
 
     singles = [
-      {uri:"blackmamba.png", path:'/blackmamba'},
-      {uri:'forever.png', path:'/'},
-      {uri:'nextlevel.jpg', path:'/'},
-      {uri:'illusion.jpg', path:'/'},
-      {uri:'lifetooshort.jpg', path:'/'},
-      {uri:'beutifulchristmas.jpg', path:'/'},
-      {uri:'holdontight.jpg', path:'/'},
-      {uri:'welcometomyworld.jpg', path:'/'},
-      {uri:'betterthing.jpg', path:'/'},
-      {uri:'zoomzoom.jpg', path:'/'},
-      {uri:'jigglebellrock.png', path:'/'},
-      {uri:'regretofthetime.png', path:'/'},
-      {uri:'dietrying.jpg', path:'/'},
-      {uri:'supernova.png', path:'/'},
-      {uri:'whiplash.webp', path:'/'},
-      {uri:'dirtywork.png', path:'/'},
-      {uri:'darkarts.webp', path:'/'},
-      {uri:'richman.webp', path:'/'}
+      {id:"blackmamba", uri:"blackmamba.png"},
+      {id:"forever", uri:'forever.png'},
+      {id:"nextlevel", uri:'nextlevel.jpg'},
+      {id:"illusion", uri:'illusion.jpg'},
+      {id:"lifetooshort", uri:'lifetooshort.jpg'},
+      {id:"beutifulchristmas", uri:'beutifulchristmas.jpg'},
+      {id:"holdontight", uri:'holdontight.jpg'},
+      {id:"welcometomyworld", uri:'welcometomyworld.jpg'},
+      {id:"betterthing", uri:'betterthing.jpg'},
+      {id:"zoomzoom", uri:'zoomzoom.jpg'},
+      {id:"jinglebellrock", uri:'jinglebellrock.png'},
+      {id:"regretofthetime", uri:'regretofthetime.png'},
+      {id:"dietrying", uri:'dietrying.jpg'},
+      {id:"supernova", uri:'supernova.png'},
+      {id:"whiplash", uri:'whiplash.webp'},
+      {id:"dirtywork", uri:'dirtywork.png'},
+      {id:"darkarts", uri:'darkarts.webp'},
+      {id:"richman", uri:'richman.webp'},
     ]
+
 }
