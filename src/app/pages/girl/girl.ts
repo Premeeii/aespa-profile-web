@@ -1,23 +1,24 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-girl',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './girl.html',
   styleUrl: './girl.css',
 })
 export class Girl {
 
   tracks = [
-    {title:"Girls", url:""},
-    {title:"Illusion", url:""},
-    {title:"Lingo", url:""},
-    {title:"Life's Too Short", url:""},
-    {title:"ICU", url:""},
-    {title:"Life's Too Short(English Version)", url:""},
-    {title:"Black Mamba", url:""},
-    {title:"Forever", url:""},
-    {title:"Dreams Come True", url:""},
+    {id:'girls', title:"Girls"},
+    {id:'illusion', title:"Illusion", },
+    {id:'lingo', title:"Lingo", },
+    {id:'lifestooshort', title:"Life's Too Short", },
+    {id:'icu', title:"ICU", },
+    {id:'lifestooshorteng', title:"Life's Too Short(English Version)", },
+    {id:'blackmamba', title:"Black Mamba", },
+    {id:'forever', title:"Forever", },
+    {id:'dreamscometrue', title:"Dreams Come True", },
   ]
 
 }

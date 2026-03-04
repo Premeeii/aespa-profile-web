@@ -4,24 +4,28 @@
 
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
     @for (album of albums; track $index) {
-      <img
-        [src]="album.uri"
-        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-xl"
-        [routerLink]="album.path"
-      />
+      <div class="aspect-square overflow-hidden rounded-xl">
+        <img
+          [src]="album.uri"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          [routerLink]="album.path"
+        />
+      </div>
     }
   </div>
 
   <!-- SINGLES -->
   <h2 class="text-2xl font-semibold tracking-widest mb-6">SINGLES</h2>
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16 ">
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
     @for (single of singles; track $index) {
-      <img
-        [src]="single.uri"
-        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-xl"
-        [routerLink]="['/single', single.id]"
-      />
- 
+      <div class="aspect-square overflow-hidden rounded-xl">
+        <img
+          [src]="single.uri"
+          class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          [routerLink]="['/single', single.id]"
+        />
+      </div>
     }
   </div>
 </div>

@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-savage',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './savage.html',
   styleUrl: './savage.css',
 })
 export class Savage {
   tracks = [
-    {title:"aenergy", url:""},
-    {title:"Savage", url:""},
-    {title:"I'll Make You Cry", url:""},
-    {title:"YEPPI YEPPI", url:""},
-    {title:"ICONIC", url:""},
-    {title:"Lucid Dream", url:""},
+    {id:"aenergy",title:"aenergy", url:""},
+    {id:"Savage", title:"Savage", url:""},
+    {id:"illmakeyoucry", title:"I'll Make You Cry", url:""},
+    {id:"yeppiyeppi", title:"YEPPI YEPPI", url:""},
+    {id:"iconic", title:"ICONIC", url:""},
+    {id:"luciddream", title:"Lucid Dream", url:""},
   ]
 }

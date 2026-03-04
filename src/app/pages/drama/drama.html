@@ -18,9 +18,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 text-base sm:text-lg md:text-2xl">
       @for (track of tracks; track $index) {
         <a
-          [href]="track.url"
-          target="_blank"
-          rel="noopener noreferrer"
+          [routerLink]="['/single', track.id]"
           class="block hover:text-blue-300 transition-colors cursor-pointer"
         >
           {{ $index + 1 }}. {{ track.title }}
